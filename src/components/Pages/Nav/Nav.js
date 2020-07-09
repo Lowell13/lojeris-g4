@@ -4,7 +4,6 @@ import { Link, NavLink } from 'react-router-dom';
 class Nav extends Component {
     render() {
         return (
-
             <div class="container main-header">
                 <Link className="navbar-brand" to="/" class="logo"></Link>
             <nav class="main-nav">
