@@ -10,10 +10,13 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { fetchBuildings } from './actions/building_action';
 import {BrowserRouter} from "react-router-dom";
+import {fetchDistricts} from "./actions/district_action";
+import {fetchCategories} from "./actions/category_action";
+import {fetchFeatures} from "./actions/feature_action";
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
-store.dispatch(fetchBuildings());
+store.dispatch(fetchBuildings(), fetchDistricts(), fetchCategories(), fetchFeatures());
 
 ReactDOM.render(
   <React.StrictMode>
