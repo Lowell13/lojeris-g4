@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Filter from '../components/FilterBuildingsList/Filter/Filter';
+import FilterCategory from '../components/FilterBuildingsList/Filter/FilterCategory';
 
 const mapStateToProps = (state, ownProps) => ({
     categories: state.categories.categories,
@@ -8,4 +8,4 @@ const mapStateToProps = (state, ownProps) => ({
 
 export default connect(
     mapStateToProps
-)(Filter);
+)(FilterCategory);

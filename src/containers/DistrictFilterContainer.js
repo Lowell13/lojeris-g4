@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Filter from '../components/FilterBuildingsList/Filter/Filter';
+import FilterDistrict from '../components/FilterBuildingsList/Filter/FilterDistrict';
 
 const mapStateToProps = (state, ownProps) => ({
     districts: state.districts.districts
@@ -7,4 +7,4 @@ const mapStateToProps = (state, ownProps) => ({
 
 export default connect(
     mapStateToProps
-)(Filter);
+)(FilterDistrict);
