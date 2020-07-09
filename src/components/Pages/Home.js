@@ -8,7 +8,10 @@ class Home extends Component {
             <section>
                 <div>Menu</div>
                 <div>En-tête</div>
-                <FilterBuildingsList />
+                <FilterBuildingsList
+                    nbMaxElem={12}
+                    page={1}
+                />
                 <Footer />
             </section>
         );

@@ -4,10 +4,34 @@ import BuildingsList from "./BuildingsList/BuildingsList";
 
 class FilterBuildingsList extends Component {
     render() {
+        const { nbMaxElem, page } = this.props;
+        let buildingsArrayAll = [];
         let buildingsArray1 = [];
         let buildingsArray2 = [];
         let buildingsArray3 = [];
         let buildingsArray4 = [];
+        let buildingCtr = 0;
+        for (let buildingItem in buildingsArrayAll) {
+            if (buildingCtr < nbMaxElem) {
+                switch (buildingCtr % 4) {
+                    case 0:
+                        buildingsArray1.push(buildingItem);
+                        break;
+                    case 1:
+                        buildingsArray2.push(buildingItem);
+                        break;
+                    case 2:
+                        buildingsArray3.push(buildingItem);
+                        break;
+                    case 3:
+                        buildingsArray4.push(buildingItem);
+                        break;
+                }
+            } else {
+                break;
+            }
+            buildingCtr++;
+        }
         return (
             <div>
                 <div>
