@@ -1,4 +1,4 @@
-import React, {Component} from 'react';;
+import React, {Component} from 'react';
 import Building from "./Building/Building";
 
 class BuildingsList extends Component {
