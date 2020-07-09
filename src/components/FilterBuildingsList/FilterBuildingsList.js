@@ -6,9 +6,9 @@ class FilterBuildingsList extends Component {
     render() {
         return (
             <div>
-                {/*<div>*/}
-                {/*    <Filter />*/}
-                {/*</div>*/}
+                <div>
+                    <Filter/>
+                </div>
                 <div>
                     <BuildingListContainer/>
                 </div>
