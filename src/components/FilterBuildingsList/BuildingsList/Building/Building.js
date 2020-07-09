@@ -7,11 +7,11 @@ class Building extends Component {
         console.log();
 
         return (
-            <Link className="text-white">
+            <Link className="text-white" style={{color: "white", textDecoration: "none"}}>
                 <p style={{color: "white", backgroundColor: "#ffc107"}}>{building.price} €</p>
                 <p style={{color: "white", textDecoration: "none"}}>{building.district.name}</p>
                 <div className="d-flex justify-content-between" style={{backgroundColor: '#073855'}}>
-                    {/*<p style={{color: "white", textDecoration: "none"}}>{building.createdAt}</p>*/}
+                    <p style={{color: "white", textDecoration: "none"}}>{building.createdAt.split('T')[0]}</p>
                     <p style={{color: "white", textDecoration: "none"}}>{building.category.name}</p>
                     <p style={{color: "white", textDecoration: "none"}}>{building.surface}</p>
                     <p style={{color: "white", textDecoration: "none"}}>{building.bedroom}</p>
