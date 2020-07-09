@@ -33,8 +33,11 @@ fieldset {
 footer.site-footer {
   margin-top: 10px;
   background-color: #073855;
-  color: #fff;
-  line-height: 50px;
+  color: #fff;    
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .cta-header {
