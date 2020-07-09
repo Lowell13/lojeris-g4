@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Filter from "./Filter/Filter";
-import BuildingsList from "./BuildingsList/BuildingsList";
-import {fetchBuildings} from "../../actions/building_action";
+import BuildingListContainer from "../../containers/BuildingListContainer";
 
 class FilterBuildingsList extends Component {
     render() {
@@ -9,11 +8,11 @@ class FilterBuildingsList extends Component {
 
         return (
             <div>
+                {/*<div>*/}
+                {/*    <Filter />*/}
+                {/*</div>*/}
                 <div>
-                    <Filter />
-                </div>
-                <div>
-                    <BuildingsList />
+                    <BuildingListContainer />
                 </div>
             </div>
         );

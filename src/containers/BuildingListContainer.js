@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import BuildingList from '../components/FilterBuildingsList/BuildingsList/BuildingsList';
+import BuildingsList from "../components/FilterBuildingsList/BuildingsList/BuildingsList";
 
 const mapStateToProps = (state, ownProps) => ({
-    building: state.buildings.buildings
+    buildings: state.buildings.buildings
 });
 
 export default connect(
     mapStateToProps
-)(BuildingList);
+)(BuildingsList);
