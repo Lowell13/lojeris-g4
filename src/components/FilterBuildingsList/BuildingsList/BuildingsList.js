@@ -3,6 +3,7 @@ import Building from "./Building/Building";
 
 function BuildingsList(props) {
     const { buildings } = props;
+    console.log(buildings);
 
     let buildingsArray1 = [], buildingsArray2 = [], buildingsArray3 = [], buildingsArray4 = [];
     let buildingCtr = 0;
