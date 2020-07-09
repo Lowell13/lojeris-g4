@@ -4,10 +4,10 @@ import BuildingsList from "./BuildingsList/BuildingsList";
 
 class FilterBuildingsList extends Component {
     render() {
-        let col_1 = [];
-        let col_2 = [];
-        let col_3 = [];
-        let col_4 = [];
+        let buildingsArray1 = [];
+        let buildingsArray2 = [];
+        let buildingsArray3 = [];
+        let buildingsArray4 = [];
         return (
             <div>
                 <div>
@@ -15,10 +15,10 @@ class FilterBuildingsList extends Component {
                 </div>
                 <div>
                     <BuildingsList
-                        col_1={col_1}
-                        col_2={col_2}
-                        col_3={col_3}
-                        col_4={col_4}
+                        buildingsArray1={buildingsArray1}
+                        buildingsArray2={buildingsArray2}
+                        buildingsArray3={buildingsArray3}
+                        buildingsArray4={buildingsArray4}
                     />
                 </div>
             </div>

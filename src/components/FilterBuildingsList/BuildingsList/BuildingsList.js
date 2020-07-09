@@ -2,37 +2,37 @@ import React, {Component} from 'react';;
 import Building from "./Building/Building";
 
 class BuildingsList extends Component {
-    construct_content(col_array) {
-        let elemsListA = col_array.map(itemColA => (
-            <Building prop={itemColA} />
+    construct_content(buildingsArrayA, buildingsArrayB) {
+        let buildingsList1 = buildingsArrayA.map(itemColA => (
+            <Building building={itemColA} />
         ));
-        let elemsListB = col_array.map(itemColB => (
-            <Building prop={itemColB} />
+        let buildingsList2 = buildingsArrayB.map(itemColB => (
+            <Building building={itemColB} />
         ));
         return (
             <div className="row">
                 <div className="col-sm-6">
-                    {elemsListA}
+                    {buildingsList1}
                 </div>
                 <div className="col-sm-6">
-                    {elemsListB}
+                    {buildingsList2}
                 </div>
             </div>
         );
     }
 
     render() {
-        const { col_1, col_2, col_3, col_4 } = this.props;
-        let col_1_2 = this.construct_content(col_1, col_2);
-        let col_3_4 = this.construct_content(col_3, col_4);
+        const { buildingsArray1, buildingsArray2, buildingsArray3, buildingsArray4 } = this.props;
+        let buildingsListA = this.construct_content(buildingsArray1, buildingsArray2);
+        let buildingsListB = this.construct_content(buildingsArray3, buildingsArray4);
 
         return (
             <div className="row">
                 <div className="col-md-6">
-                    {col_1_2}
+                    {buildingsListA}
                 </div>
                 <div className="col-md-6">
-                    {col_3_4}
+                    {buildingsListB}
                 </div>
             </div>
         );
