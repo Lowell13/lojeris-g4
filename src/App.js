@@ -8,19 +8,23 @@ import Post from "./components/Pages/Post";
 import Footer from "./components/Pages/Footer/Footer";
 
 function App() {
-  return (
-      <React.Fragment>
-          <main class="container">
-          <Nav />
-              <Switch>
-                  <Route path={'/'} exact component={Home} />
-                  <Route path={'/list'} exact component={List} />
-                  <Route path={'/post'} exact component={Post} />
-              </Switch>
-          </main>
-          <Footer />
-      </React.Fragment>
-  );
+    return (
+        <React.Fragment>
+            <Nav />
+            <header class="home-banner">
+                <h1>Bienvenue chez <strong>Lojeris</strong></h1>
+                <p>Votre partenaire de confiance en immobilier</p>
+            </header>
+            <main class="container">
+                <Switch>
+                    <Route path={'/'} exact component={Home} />
+                    <Route path={'/list'} exact component={List} />
+                    <Route path={'/post'} exact component={Post} />
+                </Switch>
+            </main>
+            <Footer />
+        </React.Fragment>
+    );
 }
 
 export default App;

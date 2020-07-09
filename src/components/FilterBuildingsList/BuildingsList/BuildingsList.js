@@ -5,7 +5,7 @@ function BuildingsList(props) {
     const { buildings } = props;
 
     let listBuilding = [];
-    buildings.map(b => listBuilding.push(<Building building={b} />));
+    buildings.map(building => listBuilding.push(<Building building={building} />));
 
     return (
         <div class="properties">

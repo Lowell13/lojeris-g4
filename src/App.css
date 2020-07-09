@@ -11,6 +11,41 @@ strong {
   color: #1396e2;
 }
 
+input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline-color: #1a9feb;
+}
+
+button {
+  width: 100%;
+  background-color: #1a9feb;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  outline: none;
+  background-color: #2172a0;
+}
+
+.select-input-filter {
+  padding: 5px 10px;
+  border: none;
+  background-color: #1a9feb;
+  color: white;
+  margin: 0 10px;
+}
+
 fieldset {
   margin: 1rem 0;
   border: 1px solid #1396e2;
@@ -126,7 +161,7 @@ ul.inline-list li {
   color: white;
   text-shadow: 1px 2px 3px black;
   height: 50vh;
-  background-image: url('/src/assets/images/banner.jpg') ;
+  background-image: url('https://i.ibb.co/sqTVMYg/banner.jpg') ;
   background-position: center;
   background-size: cover;
 }
