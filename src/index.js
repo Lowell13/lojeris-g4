@@ -9,6 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { fetchBuildings } from './actions/building_action';
+import {BrowserRouter} from "react-router-dom";
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
@@ -17,7 +18,9 @@ store.dispatch(fetchBuildings());
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
-        <App />
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
       </Provider>
   </React.StrictMode>,
   document.getElementById('root')
