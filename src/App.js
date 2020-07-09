@@ -1,19 +1,19 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './components/Pages/Home';
+import Nav from "./components/Pages/Nav/Nav";
+import Route from "react-router-dom/es/Route";
+import Switch from "react-router-dom/es/Switch";
+import Home from "./components/Pages/Home";
 
 function App() {
   return (
       <React.Fragment>
-        <main>
-          <Switch>
-            <Route path='/' exact component={Home}/>
-            <Route>
-              <p>404</p>
-            </Route>
-          </Switch>
-        </main>
+          <Nav />
+          <main>
+              <Switch>
+                  <Route path={'/'} exact component={Home} />
+              </Switch>
+          </main>
       </React.Fragment>
   );
 }
