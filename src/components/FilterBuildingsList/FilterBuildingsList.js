@@ -4,15 +4,13 @@ import BuildingListContainer from "../../containers/BuildingListContainer";
 
 class FilterBuildingsList extends Component {
     render() {
-        const { nbMaxElem, page } = this.props;
-
         return (
             <div>
                 {/*<div>*/}
                 {/*    <Filter />*/}
                 {/*</div>*/}
                 <div>
-                    <BuildingListContainer />
+                    <BuildingListContainer/>
                 </div>
             </div>
         );
