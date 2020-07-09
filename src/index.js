@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import reducers from './reducers';
+import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { fetchBuildings } from './actions/building_action';
+
+const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
+
+store.dispatch(fetchBuildings());
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

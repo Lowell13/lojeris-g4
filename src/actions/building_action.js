@@ -64,7 +64,7 @@ export function createBuildingSuccess(building) {
     return { type: CREATE_BUILDING_SUCCESS, payload: building };
 }
 
-export function BuildingFormHandleChange(name, value) {
+export function buildingFormHandleChange(name, value) {
     return {
         type: BUILDING_FORM_HANDLE_CHANGE,
         payload: { name: name, value: value }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BuildingForm from '../components/BuildingForm';
-import { buildingFormHandleChange, createBuilding } from '../actions/index';
+import { buildingFormHandleChange, createBuilding } from '../actions/building_action';
 
 const mapStateToProps = (state, ownProps) => ({
     building: state.buildings.buildingForm

@@ -24,7 +24,7 @@ const initialState = {
     loading: false,
     error: null,
     buildings: [],
-    productForm: initialBuildingFormState
+    buildingForm: initialBuildingFormState
 };
 
 function buildings(state = initialState, action) {
