@@ -1,5 +1,6 @@
 import React from 'react';
 import Building from "./Building/Building";
+import {Link} from "react-router-dom";
 
 function BuildingsList(props) {
     const { buildings } = props;
@@ -21,37 +22,16 @@ function BuildingsList(props) {
                 buildingsArray4.push(<Building building={b} />);
                 break;
         }
+        buildingCtr++;
     });
 
-    const buildingsListA = (
-        <div className="row">
-            <div className="col-sm-6">
-                {buildingsArray1}
-            </div>
-            <div className="col-sm-6">
-                {buildingsArray2}
-            </div>
-        </div>
-    );
-
-    const buildingsListB = (
-        <div className="row">
-            <div className="col-sm-6">
-                {buildingsArray3}
-            </div>
-            <div className="col-sm-6">
-                {buildingsArray4}
-            </div>
-        </div>
-    );
-
     return (
-        <div className="row">
-            <div className="col-md-6">
-                {buildingsListA}
-            </div>
-            <div className="col-md-6">
-                {buildingsListB}
+        <div>
+            <div style={{display: "flex", justifyContent: "space-around"}}>
+                <div style={{width: "20%"}}> {buildingsArray1} </div>
+                <div style={{width: "20%"}}> {buildingsArray2} </div>
+                <div style={{width: "20%"}}> {buildingsArray3} </div>
+                <div style={{width: "20%"}}> {buildingsArray4} </div>
             </div>
         </div>
     );
