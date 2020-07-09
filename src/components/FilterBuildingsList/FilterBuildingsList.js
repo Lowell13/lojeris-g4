@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import Filter from "./Filter/Filter";
 import BuildingListContainer from "../../containers/BuildingListContainer";
+import CategoryFilterContainer from "../../containers/CategoryFilterContainer";
 
 class FilterBuildingsList extends Component {
     render() {
         return (
             <div>
                 <div>
-                    <Filter/>
+                    <CategoryFilterContainer />
                 </div>
                 <div>
                     <BuildingListContainer/>

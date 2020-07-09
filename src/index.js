@@ -16,7 +16,10 @@ import {fetchFeatures} from "./actions/feature_action";
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
-store.dispatch(fetchBuildings(), fetchDistricts(), fetchCategories(), fetchFeatures());
+store.dispatch(fetchBuildings());
+store.dispatch(fetchDistricts());
+store.dispatch(fetchCategories());
+store.dispatch(fetchFeatures());
 
 ReactDOM.render(
   <React.StrictMode>

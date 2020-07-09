@@ -5,7 +5,7 @@ export const FETCH_CATEGORIES_SUCCESS = 'FETCH_CATEGORIES_SUCCESS';
 export function fetchCategories() {
     return dispatch => {
         dispatch(fetchCategoriesRequest());
-        fetch(process.env.BASE_API_URL + '/categories')
+        fetch('http://lojeris.api.pierre-jehan.com/categories')
             .then(response => response.json())
             .then(data => dispatch(fetchCategoriesSuccess(data['hydra:member'])))
             .catch(err => dispatch(fetchCategoriesFailure(err)))

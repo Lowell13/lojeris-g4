@@ -5,7 +5,7 @@ export const FETCH_FEATURES_SUCCESS = 'FETCH_FEATURES_SUCCESS';
 export function fetchFeatures() {
     return dispatch => {
         dispatch(fetchFeaturesRequest());
-        fetch(process.env.BASE_API_URL + '/features')
+        fetch('http://lojeris.api.pierre-jehan.com/features')
             .then(response => response.json())
             .then(data => dispatch(fetchFeaturesSuccess(data['hydra:member'])))
             .catch(err => dispatch(fetchFeaturesFailure(err)))

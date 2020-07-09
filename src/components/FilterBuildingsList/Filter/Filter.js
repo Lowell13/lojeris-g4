@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 function Filter(props) {
     
         const { categories, districts } = props;
+        console.log(categories);
 
         const categoriesJsx = categories.map(c => (
             <option key={c.id} value={c.name}></option>

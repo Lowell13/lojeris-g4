@@ -5,7 +5,7 @@ export const FETCH_DISTRICTS_SUCCESS = 'FETCH_DISTRICTS_SUCCESS';
 export function fetchDistricts() {
     return dispatch => {
         dispatch(fetchDistrictsRequest());
-        fetch(process.env.BASE_API_URL + '/districts')
+        fetch('http://lojeris.api.pierre-jehan.com/districts')
             .then(response => response.json())
             .then(data => dispatch(fetchDistrictsSuccess(data['hydra:member'])))
             .catch(err => dispatch(fetchDistrictsFailure(err)))
