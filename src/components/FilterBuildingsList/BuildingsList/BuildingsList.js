@@ -1,42 +1,59 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Building from "./Building/Building";
 
-class BuildingsList extends Component {
-    construct_content(buildingsArrayA, buildingsArrayB) {
-        let buildingsList1 = buildingsArrayA.map(itemColA => (
-            <Building building={itemColA} />
-        ));
-        let buildingsList2 = buildingsArrayB.map(itemColB => (
-            <Building building={itemColB} />
-        ));
-        return (
-            <div className="row">
-                <div className="col-sm-6">
-                    {buildingsList1}
-                </div>
-                <div className="col-sm-6">
-                    {buildingsList2}
-                </div>
-            </div>
-        );
-    }
+function BuildingsList(props) {
+    const { buildings } = props;
 
-    render() {
-        const { buildingsArray1, buildingsArray2, buildingsArray3, buildingsArray4 } = this.props;
-        let buildingsListA = this.construct_content(buildingsArray1, buildingsArray2);
-        let buildingsListB = this.construct_content(buildingsArray3, buildingsArray4);
+    let buildingsArray1 = [], buildingsArray2 = [], buildingsArray3 = [], buildingsArray4 = [];
+    let buildingCtr = 0;
+    buildings.map(b => {
+        switch (buildingCtr % 4) {
+            case 0:
+                buildingsArray1.push(<Building building={b} />);
+                break;
+            case 1:
+                buildingsArray2.push(<Building building={b} />);
+                break;
+            case 2:
+                buildingsArray3.push(<Building building={b} />);
+                break;
+            case 3:
+                buildingsArray4.push(<Building building={b} />);
+                break;
+        }
+    });
 
-        return (
-            <div className="row">
-                <div className="col-md-6">
-                    {buildingsListA}
-                </div>
-                <div className="col-md-6">
-                    {buildingsListB}
-                </div>
+    const buildingsListA = (
+        <div className="row">
+            <div className="col-sm-6">
+                {buildingsArray1}
             </div>
-        );
-    }
+            <div className="col-sm-6">
+                {buildingsArray2}
+            </div>
+        </div>
+    );
+    const buildingsListB = (
+        <div className="row">
+            <div className="col-sm-6">
+                {buildingsArray3}
+            </div>
+            <div className="col-sm-6">
+                {buildingsArray4}
+            </div>
+        </div>
+    );
+
+    return (
+        <div className="row">
+            <div className="col-md-6">
+                {buildingsListA}
+            </div>
+            <div className="col-md-6">
+                {buildingsListB}
+            </div>
+        </div>
+    );
 }
 
 export default BuildingsList;
