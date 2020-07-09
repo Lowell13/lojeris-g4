@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+
+body {
+  margin: 0;
+  font-family: Roboto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+strong {
+  color: #1396e2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+fieldset {
+  margin: 1rem 0;
+  border: 1px solid #1396e2;
+  padding: 12px;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  margin: 0 auto;
+  width: 1140px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  background-color: #1396e2;
+  color: #fff;
+}
+
+footer.site-footer {
+  margin-top: 10px;
+  background-color: #073855;
+  color: #fff;    
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.cta-header {
+  border-bottom: 1px solid #1396e2;
+}
+
+.cta-header > .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.cta-header ul.cta-contact {
+  display: flex;
+  align-items: center;
+}
+
+.cta-header ul.cta-contact > li {
+  margin-right: 1rem;
+}
+
+.cta-header .cta-social {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+}
+
+.main-header > nav.main-nav {
+  flex-grow: 1;
+}
+
+.logo {
+  border-radius: 50%;
+  background-color: #1a96e8;
+  height: 40px;
+  width: 40px;
+}
+
+nav.main-nav > ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+nav.main-nav > ul > li {
+  transition: 0.5s;
+  text-align: center;
+  flex: 1;
+}
+
+nav.main-nav > ul > li:hover {
+  background-color: #1396e2;
+}
+
+nav.main-nav > ul > li:hover a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav.main-nav > ul a {
+  transition: 0.5s;
+  display: block;
+  padding: 1rem 0;
+  color: #1396e2;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul.inline-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.inline-list li {
+  display: inline-block;
+}
+
+.home-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+  height: 50vh;
+  background-image: url('/src/assets/images/banner.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.home-banner h1 {
+  font-size: 3em;
+}
+
+.home-banner p {
+  font-size: 1.5em;
+}
+
+.form-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-filters > * {
+  margin: 0 1rem;
+}
+
+.properties {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.property {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.property img {
+  height: 100%;
+}
+
+.property .overlay {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  transition: 0.5s;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.property:hover .overlay {
+  bottom: 0;
+}
+
+.property .overlay .info {
+  padding: 0 10px;
+
+}
+
+.property .overlay .info h3 {
+  margin: 10px 0;
+  color: white;
+}
+
+.property .overlay .more-info {
+  background-color: #073855;
+  color: white;
+  font-size: 0.8em;
+  display: flex;
+}
+
+.property .overlay .more-info .property-info {
+  flex-grow: 1;
+  text-align: center;
+  line-height: 30px;
+}
+
+.property .overlay .more-info .property-info i.fa {
+  opacity: 0.5;
 }
