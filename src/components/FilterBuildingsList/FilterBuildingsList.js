@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Filter from "./Filter/Filter";
-import PropsList from "./PropsList/PropsList";
+import BuildingsList from "./BuildingsList/BuildingsList";
 
-class FilterPropsList extends Component {
+class FilterBuildingsList extends Component {
     render() {
         let col_1 = [];
         let col_2 = [];
@@ -14,7 +14,7 @@ class FilterPropsList extends Component {
                     <Filter />
                 </div>
                 <div>
-                    <PropsList
+                    <BuildingsList
                         col_1={col_1}
                         col_2={col_2}
                         col_3={col_3}
@@ -26,4 +26,4 @@ class FilterPropsList extends Component {
     }
 }
 
-export default FilterPropsList;
+export default FilterBuildingsList;

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';;
-import Prop from "./Prop/Prop";
+import Building from "./Building/Building";
 
-class PropsList extends Component {
+class BuildingsList extends Component {
     construct_content(col_array) {
         let elemsListA = col_array.map(itemColA => (
-            <Prop prop={itemColA} />
+            <Building prop={itemColA} />
         ));
         let elemsListB = col_array.map(itemColB => (
-            <Prop prop={itemColB} />
+            <Building prop={itemColB} />
         ));
         return (
             <div className="row">
@@ -39,4 +39,4 @@ class PropsList extends Component {
     }
 }
 
-export default PropsList;
+export default BuildingsList;
