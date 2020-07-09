@@ -126,7 +126,7 @@ ul.inline-list li {
   color: white;
   text-shadow: 1px 2px 3px black;
   height: 50vh;
-  background-image: url('/src/assets/images/banner.jpg');
+  background-image: url('/src/assets/images/banner.jpg') ;
   background-position: center;
   background-size: cover;
 }
