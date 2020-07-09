@@ -9,7 +9,7 @@ class Building extends Component {
             <Link className="text-white">
                 <p className="bg-warning">{building.price} €</p>
                 <p>{building.district}</p>
-                <div className="d-flex justify-content-between" style="background-color: #073855;">
+                <div className="d-flex justify-content-between" style={{backgroundColor: '#073855'}}>
                     <p>{building.createdAt}</p>
                     <p>{building.category}</p>
                     <p>{building.surface}</p>
