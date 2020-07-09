@@ -10,8 +10,8 @@ import Footer from "./components/Pages/Footer/Footer";
 function App() {
   return (
       <React.Fragment>
+          <main class="container">
           <Nav />
-          <main>
               <Switch>
                   <Route path={'/'} exact component={Home} />
                   <Route path={'/list'} exact component={List} />
