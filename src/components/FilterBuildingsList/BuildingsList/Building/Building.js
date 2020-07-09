@@ -7,16 +7,35 @@ class Building extends Component {
         console.log();
 
         return (
-            <Link className="text-white" style={{color: "white", textDecoration: "none"}}>
-                <p style={{color: "white", backgroundColor: "#ffc107"}}>{building.price} €</p>
-                <p style={{color: "white", textDecoration: "none"}}>{building.district.name}</p>
-                <div className="d-flex justify-content-between" style={{backgroundColor: '#073855'}}>
-                    <p style={{color: "white", textDecoration: "none"}}>{building.createdAt.split('T')[0]}</p>
-                    <p style={{color: "white", textDecoration: "none"}}>{building.category.name}</p>
-                    <p style={{color: "white", textDecoration: "none"}}>{building.surface}</p>
-                    <p style={{color: "white", textDecoration: "none"}}>{building.bedroom}</p>
-                </div>
-            </Link>
+            <article class="property">
+                <Link >
+                    <img src="images/property-02.jpg" alt="TODO"></img>
+                    <footer class="overlay">
+                        <div class="info">
+                            <div class="tag">{building.price} €</div>
+                            <h3>{building.district.name}</h3>
+                        </div>
+                        <div class="more-info">
+                            <div class="property-info">
+                                <i class="fa fa-calendar"></i>
+                                {building.createdAt.split('T')[0]}
+                            </div>
+                            <div class="property-info">
+                                <i class="fa fa-tag"></i>
+                                {building.category.name}
+                            </div>
+                            <div class="property-info">
+                                <i class="fa fa-expand"></i>
+                                {building.surface}m2
+                            </div>
+                            <div class="property-info">
+                                <i class="fa fa-bed"></i>
+                                {building.bedroom}
+                            </div>
+                        </div>
+                    </footer>
+                </Link>
+            </article>
         );
     }
 }
