@@ -1,6 +1,5 @@
 import React from 'react';
 import Building from "./Building/Building";
-import {Link} from "react-router-dom";
 
 function BuildingsList(props) {
     const { buildings } = props;

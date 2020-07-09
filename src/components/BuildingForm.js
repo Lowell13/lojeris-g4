@@ -1,4 +1,6 @@
 import React from 'react';
+import FilterCategory from "../containers/CategoryFilterContainer";
+import FilterDistrict from "../containers/DistrictFilterContainer";
 
 function BuildingForm(props) {
 
@@ -31,8 +33,12 @@ function BuildingForm(props) {
                 <input type="text" name="category" value={props.building.category} onChange={event => props.handleChange('category', event.target.value)}/>
                 <br></br>
                 <label for="disctrict">Quartier :</label>
-                <input type="text" name="disctrict" value={props.building.disctrict} onChange={event => props.handleChange('disctrict', event.target.value)}/>
+                <input type="text" name="disctrict" value={props.building.district} onChange={event => props.handleChange('disctrict', event.target.value)}/>
                 <br></br>
+                <FilterCategory />
+                <br/>
+                <FilterDistrict />
+                <br/>
                 <button>Ajouter</button>
             </fieldset>
         </form>

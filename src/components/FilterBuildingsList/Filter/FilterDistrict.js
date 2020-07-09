@@ -2,7 +2,7 @@ import React from 'react';
 
 function Filter(props) {
 
-    const { categories, districts } = props;
+    const { districts } = props;
 
     const districtsJsx = districts.map(d => (
         <option key={d.id} value={d.name}>{d.name}</option>

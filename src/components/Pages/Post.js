@@ -6,6 +6,7 @@ class Home extends Component {
         return (
             <section>
                 <div>En-tête</div>
+                <BuildingFormContainer />
             </section>
         );
     }
