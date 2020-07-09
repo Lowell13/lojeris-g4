@@ -9,7 +9,6 @@ import {
 } from '../actions/building_action';
 
 const initialBuildingFormState = {
-
     price: '0',
     surface: 0,
     bedroom: 0,
