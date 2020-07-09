@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 class Building extends Component {
     render() {
         const { building } = this.props;
+        console.log();
 
         return (
-            <Link className="text-white">
-                <p className="bg-warning">{building.price} €</p>
-                <p>{building.district}</p>
+            <Link className="text-white" style={{color: "white", textDecoration: "none"}}>
+                <p style={{color: "white", backgroundColor: "#ffc107"}}>{building.price} €</p>
+                <p style={{color: "white", textDecoration: "none"}}>{building.district.name}</p>
                 <div className="d-flex justify-content-between" style={{backgroundColor: '#073855'}}>
-                    <p>{building.createdAt}</p>
-                    <p>{building.category}</p>
-                    <p>{building.surface}</p>
-                    <p>{building.bedroom}</p>
+                    <p style={{color: "white", textDecoration: "none"}}>{building.createdAt.split('T')[0]}</p>
+                    <p style={{color: "white", textDecoration: "none"}}>{building.category.name}</p>
+                    <p style={{color: "white", textDecoration: "none"}}>{building.surface}</p>
+                    <p style={{color: "white", textDecoration: "none"}}>{building.bedroom}</p>
                 </div>
             </Link>
         );

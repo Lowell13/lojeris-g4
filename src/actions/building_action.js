@@ -25,7 +25,6 @@ export function fetchBuildingsFailure(error) {
 }
 
 export function fetchBuildingsSuccess(buildings) {
-    console.log(buildings);
     return { type: FETCH_BUILDINGS_SUCCESS, payload: buildings };
 }
 
