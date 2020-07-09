@@ -21,6 +21,7 @@ function BuildingsList(props) {
                 buildingsArray4.push(<Building building={b} />);
                 break;
         }
+        buildingCtr++;
     });
 
     const buildingsListA = (
