@@ -9,7 +9,7 @@ export const BUILDING_FORM_HANDLE_CHANGE = 'BUILDING_FORM_HANDLE_CHANGE';
 export function fetchBuildings() {
     return dispatch => {
         dispatch(fetchBuildingsRequest());
-        fetch(process.env.BASE_API_URL + '/properties')
+        fetch('http://lojeris.api.pierre-jehan.com/properties')
             .then(response => response.json())
             .then(data => dispatch(fetchBuildingsSuccess(data['hydra:member'])))
             .catch(err => dispatch(fetchBuildingsFailure(err)))
@@ -25,6 +25,7 @@ export function fetchBuildingsFailure(error) {
 }
 
 export function fetchBuildingsSuccess(buildings) {
+    console.log(buildings);
     return { type: FETCH_BUILDINGS_SUCCESS, payload: buildings };
 }
 
@@ -32,7 +33,7 @@ export function createBuilding() {
     return (dispatch, getState) => {
         const BuildingFormData = getState().buildings.BuildingForm;
         dispatch(createBuildingRequest());
-        fetch(process.env.BASE_API_URL + '/properties', {
+        fetch('http://lojeris.api.pierre-jehan.com/properties', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

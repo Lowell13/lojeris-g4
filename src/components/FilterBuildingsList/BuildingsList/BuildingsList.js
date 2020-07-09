@@ -3,7 +3,6 @@ import Building from "./Building/Building";
 
 function BuildingsList(props) {
     const { buildings } = props;
-    console.log(buildings);
 
     let buildingsArray1 = [], buildingsArray2 = [], buildingsArray3 = [], buildingsArray4 = [];
     let buildingCtr = 0;
@@ -34,6 +33,7 @@ function BuildingsList(props) {
             </div>
         </div>
     );
+
     const buildingsListB = (
         <div className="row">
             <div className="col-sm-6">
