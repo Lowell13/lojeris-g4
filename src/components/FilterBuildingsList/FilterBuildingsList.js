@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import Filter from "./Filter/Filter";
 import BuildingsList from "./BuildingsList/BuildingsList";
+import {fetchBuildings} from "../../actions/building_action";
 
 class FilterBuildingsList extends Component {
     render() {
         const { nbMaxElem, page } = this.props;
-        let buildingsArrayAll = [];
+        let buildingsArrayAll = fetchBuildings();
         let buildingsArray1 = [];
         let buildingsArray2 = [];
         let buildingsArray3 = [];
