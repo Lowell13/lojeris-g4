@@ -8,8 +8,8 @@ function Filter(props) {
     ));
 
     return (
-        <select name="district">
-            <option selected value="none">Quartier du bien</option>
+        <select defaultValue="none" name="district">
+            <option value="none">Quartier du bien</option>
             {districtsJsx}
         </select>
     );
