@@ -5,7 +5,7 @@ class Home extends Component {
     render() {
         return (
             <section>
-                <FilterBuildingsList />
+                <FilterBuildingsList nbMaxBuilding={12} />
             </section>
         );
     }
