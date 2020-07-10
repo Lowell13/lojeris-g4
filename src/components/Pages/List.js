@@ -6,7 +6,7 @@ class Home extends Component {
         return (
             <section>
                 <section>
-                    <FilterBuildingsList nbMaxBuilding={28} />
+                    <FilterBuildingsList orderTime={false} />
                 </section>
             </section>
         );

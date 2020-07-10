@@ -12,7 +12,7 @@ const initialRequestFormState = {
 const initialState = {
     loading: false,
     error: null,
-    districtSelected: '',
+    districtSelected: 'none',
     districts: [],
     districtForm: initialRequestFormState
 };
