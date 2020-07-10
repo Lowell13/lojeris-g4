@@ -1,6 +1,7 @@
 export const FETCH_CATEGORIES_REQUEST = 'FETCH_CATEGORIES_REQUEST';
 export const FETCH_CATEGORIES_FAILURE = 'FETCH_CATEGORIES_FAILURE';
 export const FETCH_CATEGORIES_SUCCESS = 'FETCH_CATEGORIES_SUCCESS';
+export const CATEGORIES_FORM_HANDLE_CHANGE = 'CATEGORIES_FORM_HANDLE_CHANGE';
 
 export function fetchCategories() {
     return dispatch => {
@@ -22,4 +23,11 @@ export function fetchCategoriesFailure(error) {
 
 export function fetchCategoriesSuccess(categories) {
     return { type: FETCH_CATEGORIES_SUCCESS, payload: categories };
+}
+
+export function requestCategoriesHandleChange(name, value) {
+    return {
+        type: CATEGORIES_FORM_HANDLE_CHANGE,
+        payload: { name: name, value: value }
+    };
 }
