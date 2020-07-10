@@ -8,8 +8,10 @@ function BuildingsList(props) {
     buildings.map(building => listBuilding.push(<Building building={building} />));
 
     return (
-        <div class="properties">
-            {listBuilding}
+        <div class="wrapping">
+            <div class="properties">
+                {listBuilding}
+            </div>
         </div>
     );
 }
