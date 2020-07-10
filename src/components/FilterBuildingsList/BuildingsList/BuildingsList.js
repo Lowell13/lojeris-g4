@@ -8,7 +8,7 @@ function BuildingsList(props) {
     let ctrBuilding = 0;
     buildings.map(building => {
         if (ctrBuilding < nbMaxBuilding) {
-            listBuilding.push(<Building building={building} />);
+            listBuilding.push(<Building key={ctrBuilding} building={building} />);
         }
         ctrBuilding++;
     });
