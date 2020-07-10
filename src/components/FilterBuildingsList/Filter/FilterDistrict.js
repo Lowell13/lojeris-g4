@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Filter(props) {
-
     const { districts } = props;
 
     const districtsJsx = districts.map(d => (
@@ -10,11 +9,10 @@ function Filter(props) {
 
     return (
         <select name="district">
-            <option value="">Quartier du bien</option>
+            <option selected value="none">Quartier du bien</option>
             {districtsJsx}
         </select>
     );
-
 }
 
 export default Filter;
