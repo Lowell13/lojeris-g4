@@ -13,6 +13,7 @@ import {BrowserRouter} from "react-router-dom";
 import {fetchDistricts} from "./actions/district_action";
 import {fetchCategories} from "./actions/category_action";
 import {fetchFeatures} from "./actions/feature_action";
+import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 

@@ -112,8 +112,8 @@ footer.site-footer {
 .logo {
   border-radius: 50%;
   background-color: #1a96e8;
-  height: 40px;
-  width: 40px;
+  min-height: 42px;
+  min-width: 42px;
 }
 
 nav.main-nav > ul {
