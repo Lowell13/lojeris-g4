@@ -13,8 +13,8 @@ class FilterBuildingsList extends Component {
                     <form>
                         <fieldset>
                             <legend>Filtres :</legend>
-                            <CategoryFilterContainer/>
-                            <DistrictFilterContainer/>
+                            <CategoryFilterContainer />
+                            <DistrictFilterContainer />
                         </fieldset>
                     </form>
                 </div>
