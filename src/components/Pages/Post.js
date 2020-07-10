@@ -5,7 +5,6 @@ class Home extends Component {
     render() {
         return (
             <section>
-                <div>En-tête</div>
                 <BuildingFormContainer />
             </section>
         );
