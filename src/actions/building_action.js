@@ -35,7 +35,9 @@ export function fetchBuildingsSuccess(buildings) {
 
 export function createBuilding() {
     return (dispatch, getState) => {
-        const BuildingFormData = getState().buildings.BuildingForm;
+        const buildingFormData = getState().buildings.buildingForm;
+        // Filter here to get the Category and Districts items from the list based on the name
+        // The Category list is in props but we can't access props here
         dispatch(createBuildingRequest());
         fetch('http://lojeris.api.pierre-jehan.com/properties', {
             method: 'POST',
@@ -43,7 +45,7 @@ export function createBuilding() {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(BuildingFormData)
+            body: JSON.stringify(buildingFormData)
         })
             .then(response => {
                 if (response.status === 201) {

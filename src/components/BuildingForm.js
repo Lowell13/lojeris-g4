@@ -4,6 +4,11 @@ import FilterDistrict from "../containers/DistrictFilterContainer";
 
 function BuildingForm(props) {
 
+    const { categorySelected, districtSelected } = props;
+
+    props.building.category = categorySelected;
+    props.building.district = districtSelected;
+
     function handleSubmit(event) {
         event.preventDefault();
         props.handleSubmit();
@@ -29,12 +34,7 @@ function BuildingForm(props) {
                 <label for="picture">Image(s) :</label>
                 <input type="file" name="picture" value={props.building.picture} onChange={event => props.handleChange('picture', event.target.value)}/>
                 <br></br>
-{/*                <label for="category">Catégorie :</label>
-                <input type="text" name="category" value={props.building.category} onChange={event => props.handleChange('category', event.target.value)}/>
-                <br></br>
-                <label for="disctrict">Quartier :</label>
-                <input type="text" name="disctrict" value={props.building.district} onChange={event => props.handleChange('disctrict', event.target.value)}/>
-                <br></br>*/}
+                {/*Is it really the way to get props ?*/}
                 <FilterCategory value={props.building.category} onChange={event => props.handleChange('category', event.target.value)} />
                 <br/>
                 <FilterDistrict value={props.building.district} onChange={event => props.handleChange('district', event.target.value)} />
