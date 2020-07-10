@@ -14,8 +14,10 @@ function BuildingsList(props) {
     });
 
     return (
-        <div class="properties">
-            {listBuilding}
+        <div class="wrapping">
+            <div class="properties">
+                {listBuilding}
+            </div>
         </div>
     );
 }

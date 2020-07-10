@@ -54,8 +54,8 @@ fieldset {
 }
 
 .container {
-  margin: 0 auto;
-  width: 1140px;
+  margin: 0 18%;
+  width: 60%;
 }
 
 .tag {
@@ -184,9 +184,15 @@ ul.inline-list li {
   margin: 0 1rem;
 }
 
+.wrapping {
+  display: flex;
+  flex-direction: column;
+}
+
 .properties {
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, 280px);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
