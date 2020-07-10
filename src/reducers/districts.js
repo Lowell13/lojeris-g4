@@ -12,6 +12,7 @@ const initialRequestFormState = {
 const initialState = {
     loading: false,
     error: null,
+    districtSelected: '',
     districts: [],
     districtForm: initialRequestFormState
 };
@@ -30,7 +31,8 @@ function districts(state = initialState, action) {
                 districtForm: {
                     ...state.districtForm,
                     [action.payload.name]: action.payload.value
-                }
+                },
+                districtSelected: action.payload.value,
             };
         default:
             return state;

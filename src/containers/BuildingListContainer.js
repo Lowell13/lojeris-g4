@@ -3,6 +3,8 @@ import BuildingsList from "../components/FilterBuildingsList/BuildingsList/Build
 
 const mapStateToProps = (state, ownProps) => ({
     buildings: state.buildings.buildings,
+    categorySelected: state.buildings.categorySelected,
+    districtSelected: state.buildings.districtSelected,
     nbMaxBuilding: ownProps.nbMaxBuilding
 });
 

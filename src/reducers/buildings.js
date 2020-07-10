@@ -23,6 +23,8 @@ const initialState = {
     loading: false,
     error: null,
     buildings: [],
+    categorySelected: '',
+    districtSelected: '',
     buildingForm: initialBuildingFormState
 };
 
