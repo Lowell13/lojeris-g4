@@ -5,7 +5,9 @@ class Nav extends Component {
     render() {
         return (
             <div class="container main-header">
-                <Link className="navbar-brand" to="/" class="logo"></Link>
+                <Link className="navbar-brand" to="/" class="logo"><span class="fa-stack fa-lg">
+                    <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                </span></Link>
             <nav class="main-nav">
                 <ul>
                     <li><NavLink to="/" exact className="nav-link">Accueil</NavLink></li>

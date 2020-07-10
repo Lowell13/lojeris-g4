@@ -29,15 +29,15 @@ function BuildingForm(props) {
                 <label for="picture">Image(s) :</label>
                 <input type="file" name="picture" value={props.building.picture} onChange={event => props.handleChange('picture', event.target.value)}/>
                 <br></br>
-                <label for="category">Catégorie :</label>
+{/*                <label for="category">Catégorie :</label>
                 <input type="text" name="category" value={props.building.category} onChange={event => props.handleChange('category', event.target.value)}/>
                 <br></br>
                 <label for="disctrict">Quartier :</label>
                 <input type="text" name="disctrict" value={props.building.district} onChange={event => props.handleChange('disctrict', event.target.value)}/>
-                <br></br>
-                <FilterCategory />
+                <br></br>*/}
+                <FilterCategory value={props.building.category} onChange={event => props.handleChange('category', event.target.value)} />
                 <br/>
-                <FilterDistrict />
+                <FilterDistrict value={props.building.district} onChange={event => props.handleChange('district', event.target.value)} />
                 <br/>
                 <button>Ajouter</button>
             </fieldset>

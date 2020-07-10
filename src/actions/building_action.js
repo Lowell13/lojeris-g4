@@ -25,6 +25,11 @@ export function fetchBuildingsFailure(error) {
 }
 
 export function fetchBuildingsSuccess(buildings) {
+    // Commented because pictures doesn't work currently.
+    // We probably can also do this cleaner, but first I wanna see if this works.
+    /*buildings.map(b => {
+        b.picture = fetch('http://lojeris.api.pierre-jehan.com/media_objects/' + b.picture.id)
+    });*/
     return { type: FETCH_BUILDINGS_SUCCESS, payload: buildings };
 }
 
