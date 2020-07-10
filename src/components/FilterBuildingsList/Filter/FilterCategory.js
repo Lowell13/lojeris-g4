@@ -8,8 +8,8 @@ function Filter(props) {
     ));
 
     return (
-        <select name="type">
-            <option selected value="none">Type du bien</option>
+        <select defaultValue="none" name="type">
+            <option value="none">Type du bien</option>
             {categoriesJsx}
         </select>
 

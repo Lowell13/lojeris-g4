@@ -7,8 +7,8 @@ class Building extends Component {
 
         return (
             <article class="property">
-                <Link >
-                    <img src="https://i.ibb.co/s1Y8NcX/property-05.jpg" alt="{building.district.name}"></img>
+                <Link to="/" >
+                    <img src="https://i.ibb.co/s1Y8NcX/property-05.jpg" alt="{building.district.name}" />
                     <footer class="overlay">
                         <div class="info">
                             <div class="tag">{building.price} €</div>
