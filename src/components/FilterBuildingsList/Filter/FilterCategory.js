@@ -8,11 +8,10 @@ function Filter(props) {
     ));
 
     return (
-        <select defaultValue="none" name="type">
+        <select onChange={event => props.handleChange('title', event.target.value)} defaultValue="none">
             <option value="none">Type du bien</option>
             {categoriesJsx}
         </select>
-
     );
 }
 

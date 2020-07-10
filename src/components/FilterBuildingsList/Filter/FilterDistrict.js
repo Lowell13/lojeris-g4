@@ -8,7 +8,7 @@ function Filter(props) {
     ));
 
     return (
-        <select defaultValue="none" name="district">
+        <select onChange={event => props.handleChange('title', event.target.value)} defaultValue="none">
             <option value="none">Quartier du bien</option>
             {districtsJsx}
         </select>
