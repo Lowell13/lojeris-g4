@@ -5,6 +5,8 @@ import DistrictFilterContainer from '../../containers/DistrictFilterContainer';
 
 class FilterBuildingsList extends Component {
     render() {
+        const { nbMaxBuilding } = this.props;
+
         return (
             <div>
                 <div>
@@ -17,7 +19,7 @@ class FilterBuildingsList extends Component {
                     </form>
                 </div>
                 <div>
-                    <BuildingListContainer />
+                    <BuildingListContainer nbMaxBuilding={nbMaxBuilding} />
                 </div>
             </div>
         );

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class Building extends Component {
     render() {
         const { building } = this.props;
-        console.log(building.district);
 
         return (
             <article class="property">
