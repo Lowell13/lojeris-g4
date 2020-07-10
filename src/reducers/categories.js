@@ -12,7 +12,7 @@ const initialRequestFormState = {
 const initialState = {
     loading: false,
     error: null,
-    categorySelected: '',
+    categorySelected: 'none',
     categories: [],
     categoryForm: initialRequestFormState
 };
