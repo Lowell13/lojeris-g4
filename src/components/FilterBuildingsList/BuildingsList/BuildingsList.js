@@ -5,7 +5,13 @@ function BuildingsList(props) {
     const { buildings, nbMaxBuilding } = props;
 
     let listBuilding = [];
-    buildings.map(building => listBuilding.push(<Building building={building} />));
+    let ctrBuilding = 0;
+    buildings.map(building => {
+        if (ctrBuilding < nbMaxBuilding) {
+            listBuilding.push(<Building building={building} />);
+        }
+        ctrBuilding++;
+    });
 
     return (
         <div class="properties">
