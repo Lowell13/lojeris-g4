@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class Footer extends Component {
     render() {
         return (
-            <footer class="site-footer">
-                <div class="container">
+            <footer className="site-footer">
+                <div className="container">
                     <p>Copyright © 2020 Lojeris</p>
                 </div>
             </footer>

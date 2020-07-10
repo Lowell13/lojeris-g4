@@ -6,16 +6,17 @@ function BuildingsList(props) {
 
     let listBuilding = [];
     let ctrBuilding = 0;
-    buildings.map(building => {
+    buildings.map((building, key) => {
         if (ctrBuilding < nbMaxBuilding) {
-            listBuilding.push(<Building key={ctrBuilding} building={building} />);
+            listBuilding.push(<Building building={building} key={key}/>);
         }
         ctrBuilding++;
+        return null;
     });
 
     return (
-        <div class="wrapping">
-            <div class="properties">
+        <div className="wrapping">
+            <div className="properties">
                 {listBuilding}
             </div>
         </div>

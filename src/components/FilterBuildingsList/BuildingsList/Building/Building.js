@@ -6,29 +6,29 @@ class Building extends Component {
         const { building } = this.props;
 
         return (
-            <article class="property">
-                <Link to="/" >
-                    <img src="https://i.ibb.co/s1Y8NcX/property-05.jpg" alt="{building.district.name}" />
-                    <footer class="overlay">
-                        <div class="info">
-                            <div class="tag">{building.price} €</div>
+            <article className="property">
+                <Link to="">
+                    <img src="https://i.ibb.co/s1Y8NcX/property-05.jpg" alt="{building.district.name}"></img>
+                    <footer className="overlay">
+                        <div className="info">
+                            <div className="tag">{building.price} €</div>
                             <h3>{building.district.name}</h3>
                         </div>
-                        <div class="more-info">
-                            <div class="property-info">
-                                <i class="fa fa-calendar"></i>
+                        <div className="more-info">
+                            <div className="property-info">
+                                <i className="fa fa-calendar"> </i>
                                 {building.createdAt.split('T')[0]}
                             </div>
-                            <div class="property-info">
-                                <i class="fa fa-tag"></i>
+                            <div className="property-info">
+                                <i className="fa fa-tag"> </i>
                                 {building.category.name}
                             </div>
-                            <div class="property-info">
-                                <i class="fa fa-expand"></i>
+                            <div className="property-info">
+                                <i className="fa fa-expand"> </i>
                                 {building.surface}m2
                             </div>
-                            <div class="property-info">
-                                <i class="fa fa-bed"></i>
+                            <div className="property-info">
+                                <i className="fa fa-bed"> </i>
                                 {building.bedroom}
                             </div>
                         </div>
