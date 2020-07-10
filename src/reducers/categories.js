@@ -12,6 +12,7 @@ const initialRequestFormState = {
 const initialState = {
     loading: false,
     error: null,
+    categorySelected: '',
     categories: [],
     categoryForm: initialRequestFormState
 };
@@ -25,12 +26,14 @@ function categories(state = initialState, action) {
         case FETCH_CATEGORIES_SUCCESS:
             return { ...state, categories: action.payload, loading: false };
         case CATEGORIES_FORM_HANDLE_CHANGE:
+            console.log(state);
             return {
                 ...state,
                 categoryForm: {
                     ...state.categoryForm,
                     [action.payload.name]: action.payload.value
-                }
+                },
+                categorySelected: action.payload.value
             };
         default:
             return state;
