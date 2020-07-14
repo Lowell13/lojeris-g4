@@ -14,9 +14,10 @@ const initialBuildingFormState = {
     bedroom: 0,
     description: '',
     picture: null, // Picture is null for the moment so it doesn't break anything and we can try our code. Will change it when /media_objects will work
-    category: '',
+    category: { name : '' , properties: '' },
     district: '',
-    features: [''],
+    features: [],
+    createdAt: "2020-07-14T15:04:25.209Z",
 };
 
 const initialState = {

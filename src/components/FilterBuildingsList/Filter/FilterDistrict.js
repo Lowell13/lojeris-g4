@@ -4,7 +4,7 @@ function Filter(props) {
     const { districts } = props;
 
     const districtsJsx = districts.map(d => (
-        <option key={d.id} value={d}>{d.name}</option>
+        <option key={d.id} value={d.name}>{d.name}</option>
     ));
 
     return (

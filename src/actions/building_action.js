@@ -1,3 +1,5 @@
+import features from "../reducers/features";
+
 export const FETCH_BUILDINGS_REQUEST = 'FETCH_BUILDINGS_REQUEST';
 export const FETCH_BUILDINGS_FAILURE = 'FETCH_BUILDINGS_FAILURE';
 export const FETCH_BUILDINGS_SUCCESS = 'FETCH_BUILDINGS_SUCCESS';
@@ -33,11 +35,35 @@ export function fetchBuildingsSuccess(buildings) {
     return { type: FETCH_BUILDINGS_SUCCESS, payload: buildings };
 }
 
-export function createBuilding() {
+export function createBuilding(props) {
+    const { buildings, categories, districts, features } = props;
+
     return (dispatch, getState) => {
         const buildingFormData = getState().buildings.buildingForm;
-        // Filter here to get the Category and Districts items from the list based on the name
-        // The Category list is in props but we can't access props here
+
+       categories.map(c => {
+            if (c.name === buildingFormData.category.name) {
+                buildingFormData.category.name = c.name;
+                buildingFormData.category.properties = c.properties;
+            }
+        });
+        districts.map(d => {
+            if (d.name === buildingFormData.district) {
+                buildingFormData.district = d;
+            }
+        });
+        buildings.map(b => {
+            buildingFormData.picture = b.picture.contentUrl;
+        });
+        features.map(f => {
+            buildingFormData.features.push(f);
+        })
+        buildingFormData.bedroom = parseInt(buildingFormData.bedroom, 10);
+
+        console.log("Form :");
+        console.log(buildingFormData);
+
+
         dispatch(createBuildingRequest());
         fetch('http://lojeris.api.pierre-jehan.com/properties', {
             method: 'POST',

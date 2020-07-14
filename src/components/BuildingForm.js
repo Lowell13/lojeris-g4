@@ -11,7 +11,7 @@ function BuildingForm(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.handleSubmit();
+        props.handleSubmit(props);
     }
 
     return (
@@ -34,10 +34,9 @@ function BuildingForm(props) {
                 <label for="picture">Image(s) :</label>
                 <input type="file" name="picture" value={props.building.picture} onChange={event => props.handleChange('picture', event.target.value)}/>
                 <br></br>
-                {/*Is it really the way to get props ?*/}
-                <FilterCategory value={props.building.category} onChange={event => props.handleChange('category', event.target.value)} />
+                <FilterCategory />
                 <br/>
-                <FilterDistrict value={props.building.district} onChange={event => props.handleChange('district', event.target.value)} />
+                <FilterDistrict />
                 <br/>
                 <button>Ajouter</button>
             </fieldset>
