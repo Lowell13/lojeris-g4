@@ -8,10 +8,19 @@ function BuildingsList(props) {
     buildings.map((building, key) => {
         let categoryValid = false;
         let districtValid = false;
-        if (categorySelected === building.category.name || categorySelected === "none") {
+
+        console.log("Category : " + categorySelected);
+        console.log("District : " + districtSelected);
+
+        if (categorySelected.name === building.category.name || categorySelected === "none") {
             categoryValid = true;
+            console.log("Category is valid");
+        } else {
+            console.log(categorySelected);
+            console.log("Debug : " + categorySelected.name + " -- " + building.category.name)
+            console.log("Category is invalid");
         }
-        if (districtSelected === building.district.name || districtSelected === "none") {
+        if (districtSelected.name === building.district.name || districtSelected === "none") {
             districtValid = true;
         }
         if (categoryValid && districtValid) {
